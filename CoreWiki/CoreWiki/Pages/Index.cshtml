@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div>
+        <h1>Welcome To Wikipedia.org</h1>
+
+        <p>There are 3 pages in the small wikipedia. Please have a find link below:</p>
+        <ol>
+            <li><a asp-page="/BanachParadox">Banach–Tarski paradox</a></li>
+            <li><a asp-page="/TrolleyProblem">Trolley Problem</a></li>
+            <li><a asp-page="/HamiltonianPathProblem">Hamiltonian Path Problem</a></li>
+        </ol>
+    </div>
