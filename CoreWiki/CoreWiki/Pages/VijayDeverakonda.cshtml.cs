@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CoreWiki.Pages
 {
-    public class TrolleyProblemModel : PageModel
+    public class VijayDeverakondaModel : PageModel
     {
         public void OnGet()
         {

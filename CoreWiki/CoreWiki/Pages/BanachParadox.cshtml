@@ -1,5 +1,4 @@
 ﻿@page
-@model CoreWiki.Pages.BanachParadoxModel
 @{
     ViewData["Title"] = "BanachParadox";
 }
@@ -46,5 +45,85 @@
         continuously into place without running into one another.
     </p>
 </div>
+<hr/>
+<div class="contents" style="box-sizing: content-box;width: 500px;height: 125px;padding: 2px; border: 2px solid black;">
+    <h3>Contents</h3>
+    <ol>
+        <li><a href="#BTP">Banach and Tarski publication</a></li>
+        <li><a href="#FT">Formal treatment</a></li>
+        <li><a href="#Con">Connection with earlier work and the role of the axiom of choice</a></li>
+    </ol>
+</div>
 
+<div>
+    <h3 id="BTP">Banach and Tarski publication</h3>
+    <hr />
+    <p>
+        In a paper published in 1924,[4] Stefan Banach and Alfred Tarski gave a construction of such a paradoxical 
+        decomposition, based on earlier work by Giuseppe Vitali concerning the unit interval and on the paradoxical 
+        decompositions of the sphere by Felix Hausdorff, and discussed a number of related questions concerning 
+        decompositions of subsets of Euclidean spaces in various dimensions. They proved the following more general 
+        statement, the strong form of the Banach–Tarski paradox:
+        <blockquote>
+            Given any two bounded subsets A and B of an Euclidean space in at least three dimensions, 
+            both of which have a nonempty interior, there are partitions of A and B into a finite number of 
+            disjoint subsets(for some integer k), such that for each (integer) i between 1 and k, 
+            the sets Ai and Bi are congruent.
+        </blockquote>
+   </p>
 
+    <p>
+        Now let A be the original ball and B be the union of two translated copies of the original ball. 
+        Then the proposition means that you can divide the original ball A into a certain number of pieces 
+        and then rotate and translate these pieces in such a way that the result is the whole set B, 
+        which contains two copies of A.
+    </p>
+    <p>
+        The strong form of the Banach–Tarski paradox is false in dimensions one and two, 
+        but Banach and Tarski showed that an analogous statement remains true if countably many subsets are allowed. 
+        The difference between the dimensions 1 and 2 on the one hand, and three and higher on the other hand, 
+        is due to the richer structure of the group E(n) of Euclidean motions in higher dimensions, 
+        which is solvable for n = 1, 2 and contains a free group with two generators for n ≥ 3. John von Neumann 
+        studied the properties of the group of equivalences that make a paradoxical decomposition possible and 
+        introduced the notion of amenable groups. He also found a form of the paradox in the plane which uses 
+        area-preserving affine transformations in place of the usual congruences.
+    </p>
+</div>
+
+<div>
+    <h3 id="FT">Formal Treatment</h3>
+    <hr />
+    <p>
+        The Banach–Tarski paradox states that a ball in the ordinary Euclidean space can be doubled using only the
+        operations of partitioning into subsets, replacing a set with a congruent set, and reassembling. Its mathematical
+        structure is greatly elucidated by emphasizing the role played by the group of Euclidean motions and introducing
+        the notions of <strong>equidecomposable</strong> sets and a paradoxical set. Suppose that G is a group acting on a set X. In the
+        most important special case, X is an n-dimensional Euclidean space (for integral n), and G consists of all
+        isometries of X, i.e. the transformations of X into itself that preserve the distances, usually denoted E(n).
+        Two geometric figures that can be transformed into each other are called congruent, and this terminology will be
+        extended to the general G-action. Two subsets A and B of X are called G-equidecomposable, or equidecomposable with
+        respect to G, if A and B can be partitioned into the same finite number of respectively G-congruent pieces.
+        This defines an equivalence relation among all subsets of X. Formally, if there exist non-empty sets.
+    </p>
+    <p>
+        The heart of the proof of the "doubling the ball" form of the paradox presented below is the remarkable fact that by a Euclidean isometry (and renaming of elements), one can divide a certain set (essentially, the surface of a unit sphere) into four parts, then rotate one of them to become itself plus two of the other parts. This follows rather easily from a F2-paradoxical decomposition of F2, the free group with two generators. Banach and Tarski's proof relied on an analogous fact discovered by Hausdorff some years earlier: the surface of a unit sphere in space is a disjoint union of three sets B, C, D and a countable set E such that, on the one hand, B, C, D are pairwise congruent, and on the other hand, B is congruent with the union of C and D. This is often called the Hausdorff paradox.
+    </p>
+</div>
+
+<div>
+    <h3 id="Con">Connection with earlier work and the role of the axiom of choice</h3>
+    <hr/>
+    <p>
+        Banach and Tarski explicitly acknowledge Giuseppe Vitali's 1905 construction of the set bearing his name, Hausdorff's paradox (1914), and an earlier (1923) paper of Banach as the precursors to their work. Vitali's and Hausdorff's constructions depend on Zermelo's axiom of choice ("AC"), which is also crucial to the Banach–Tarski paper, both for proving their paradox and for the proof of another result:
+    </p>
+    <dd>
+        <dl>Two Euclidean polygons, one of which strictly contains the other, are not equidecomposable.</dl>
+    </dd>
+    <p>
+        They remark:
+        <blockquote>Le rôle que joue cet axiome dans nos raisonnements nous semble mériter l'attention</blockquote>
+    </p>
+    <p>
+        They point out that while the second result fully agrees with our geometric intuition, its proof uses AC in an even more substantial way than the proof of the paradox. Thus Banach and Tarski imply that AC should not be rejected simply because it produces a paradoxical decomposition, for such an argument also undermines proofs of geometrically intuitive statements.
+    </p>
+</div>

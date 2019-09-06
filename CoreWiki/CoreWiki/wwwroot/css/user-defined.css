@@ -17,3 +17,9 @@
 .clearfix {
     overflow: auto;
 }
+
+div.contents {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid black;
+}
