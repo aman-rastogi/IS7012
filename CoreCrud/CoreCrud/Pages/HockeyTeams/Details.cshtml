@@ -1,0 +1,55 @@
+﻿@page
+@model CoreCrud.Pages.HockeyTeams.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HockeyTeam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HockeyTeam.TeamName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HockeyTeam.TeamName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HockeyTeam.TeamCreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HockeyTeam.TeamCreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HockeyTeam.IsTeamActive)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HockeyTeam.IsTeamActive)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HockeyTeam.Budget)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HockeyTeam.Budget)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HockeyTeam.TeamEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HockeyTeam.TeamEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HockeyTeam.NationalityID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HockeyTeam.NationalityID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.HockeyTeam.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
