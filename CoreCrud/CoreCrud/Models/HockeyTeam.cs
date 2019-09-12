@@ -18,6 +18,5 @@ namespace CoreCrud.Models
         public DateTime? TeamEndDate { get; set; }
         public int NationalityID { get; set; }
         public Nationality nationality;
-
     }
 }
