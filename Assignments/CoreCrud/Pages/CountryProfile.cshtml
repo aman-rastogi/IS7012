@@ -1,0 +1,51 @@
+﻿@page
+@model CoreCrud.Pages.CountryProfileModel
+@{
+    ViewData["Title"] = "CountryProfile";
+}
+
+@{
+    int flag = 0;
+}
+
+@foreach (var nationality in Model.TeamsOfANationality)
+{
+
+    if (flag == 0)
+    {
+        <h2>Country Profile of @nationality.CountryName</h2>
+        flag++;
+
+        <div>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Wins</th>
+                        <th>Loss</th>
+                        <th>Goals Scored</th>
+                        <th>Goals Against</th>
+                        <th>Budget</th>
+                        <th>Team Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+
+                    @foreach (var hockeyTeam in nationality.HockeyTeams.OrderByDescending(x=>x.Wins))
+                    {
+                        <tr>
+                            <td>@hockeyTeam.TeamName</td>
+                            <td>@hockeyTeam.Wins</td>
+                            <td>@hockeyTeam.Loss</td>
+                            <td>@hockeyTeam.GoalsScored</td>
+                            <td>@hockeyTeam.GoalsAgainst</td>
+                            <td>@hockeyTeam.Budget</td>
+                            <td>@hockeyTeam.IsTeamActive</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}

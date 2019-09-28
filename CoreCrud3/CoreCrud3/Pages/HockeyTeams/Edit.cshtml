@@ -1,0 +1,80 @@
+﻿@page
+@model CoreCrud3.Pages.HockeyTeams.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>HockeyTeam</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="HockeyTeam.ID" />
+            <div class="form-group">
+                <label asp-for="HockeyTeam.TeamName" class="control-label"></label>
+                <input asp-for="HockeyTeam.TeamName" class="form-control" />
+                <span asp-validation-for="HockeyTeam.TeamName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.TeamCreationDate" class="control-label"></label>
+                <input asp-for="HockeyTeam.TeamCreationDate" class="form-control" />
+                <span asp-validation-for="HockeyTeam.TeamCreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HockeyTeam.IsTeamActive" /> @Html.DisplayNameFor(model => model.HockeyTeam.IsTeamActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.Budget" class="control-label"></label>
+                <input asp-for="HockeyTeam.Budget" class="form-control" />
+                <span asp-validation-for="HockeyTeam.Budget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.Wins" class="control-label"></label>
+                <input asp-for="HockeyTeam.Wins" class="form-control" />
+                <span asp-validation-for="HockeyTeam.Wins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.Loss" class="control-label"></label>
+                <input asp-for="HockeyTeam.Loss" class="form-control" />
+                <span asp-validation-for="HockeyTeam.Loss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.TeamEndDate" class="control-label"></label>
+                <input asp-for="HockeyTeam.TeamEndDate" class="form-control" />
+                <span asp-validation-for="HockeyTeam.TeamEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.GoalsScored" class="control-label"></label>
+                <input asp-for="HockeyTeam.GoalsScored" class="form-control" />
+                <span asp-validation-for="HockeyTeam.GoalsScored" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.GoalsAgainst" class="control-label"></label>
+                <input asp-for="HockeyTeam.GoalsAgainst" class="form-control" />
+                <span asp-validation-for="HockeyTeam.GoalsAgainst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HockeyTeam.NationalityID" class="control-label"></label>
+                <select asp-for="HockeyTeam.NationalityID" class="form-control" asp-items="ViewBag.NationalityID"></select>
+                <span asp-validation-for="HockeyTeam.NationalityID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

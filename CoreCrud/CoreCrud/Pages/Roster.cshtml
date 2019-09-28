@@ -1,0 +1,125 @@
+﻿@page
+@model CoreCrud.Pages.RosterModel
+@{
+    ViewData["Title"] = "Roster";
+}
+
+<h2>Roster</h2>
+<div>
+    <table class="table table-bordered  table-dark">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Country Name</th>
+                <th>Wins</th>
+                <th>Loss</th>
+                <th>Goals Scored</th>
+                <th>Goals Against</th>
+                <th>Budget</th>
+                <th>Team Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+
+            @foreach (var hockeyTeam in Model.HockeyTeams)
+            {
+            <tr>
+                <td>@hockeyTeam.TeamName</td>
+                <td>
+                    @{
+                        if (hockeyTeam.FlagHelper == "IND")
+                        {
+                            <span><img src="~/images/countries/India.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "AUS")
+                        {
+                            <span><img src="~/images/countries/Aus.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "NET")
+                        {
+                            <span><img src="~/images/countries/Netherlands.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "BEL")
+                        {
+                            <span><img src="~/images/countries/Belgium.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "GER")
+                        {
+                            <span><img src="~/images/countries/Germany.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "ENG")
+                        {
+                            <span><img src="~/images/countries/eng.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "ARG")
+                        {
+                            <span><img src="~/images/countries/Argentina.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "JPN")
+                        {
+                            <span><img src="~/images/countries/Japan.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "PAK")
+                        {
+                            <span><img src="~/images/countries/Pak.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "SPN")
+                        {
+                            <span><img src="~/images/countries/spain.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "CAN")
+                        {
+                            <span><img src="~/images/countries/Canada.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "POL")
+                        {
+                            <span><img src="~/images/countries/Poland.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "ITA")
+                        {
+                            <span><img src="~/images/countries/Italy.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "RUS")
+                        {
+                            <span><img src="~/images/countries/Russia.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "CHL")
+                        {
+                            <span><img src="~/images/countries/Chile.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "UKR")
+                        {
+                            <span><img src="~/images/countries/Ukraine.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "CHN")
+                        {
+                            <span><img src="~/images/countries/China.png" width=60 height=40 /></span>
+                        }
+                        else if (hockeyTeam.FlagHelper == "NA")
+                        {
+                            <span><img src="~/images/countries/Aus.png" width=60 height=40 /></span>
+                        }
+
+                    }
+                </td>
+                <td>@hockeyTeam.Wins</td>
+                <td>@hockeyTeam.Loss</td>
+                <td>@hockeyTeam.GoalsScored</td>
+                <td>@hockeyTeam.GoalsAgainst</td>
+                <td>@hockeyTeam.Budget</td>
+                @{ if (hockeyTeam.IsTeamActive)
+                    {
+                        <td class="table-success">@hockeyTeam.IsTeamActive</td>
+                    }
+                    else
+                    {
+                        <td class="table-danger">@hockeyTeam.IsTeamActive</td>
+                    }
+                }
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+

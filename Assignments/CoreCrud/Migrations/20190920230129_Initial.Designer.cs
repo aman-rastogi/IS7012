@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreCrud.Migrations
 {
     [DbContext(typeof(CoreCrudContext))]
-    [Migration("20190911232615_Initial")]
+    [Migration("20190920230129_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,7 +29,13 @@ namespace CoreCrud.Migrations
 
                     b.Property<decimal>("Budget");
 
+                    b.Property<int>("GoalsAgainst");
+
+                    b.Property<int>("GoalsScored");
+
                     b.Property<bool>("IsTeamActive");
+
+                    b.Property<int>("Loss");
 
                     b.Property<int>("NationalityID");
 
@@ -38,6 +44,8 @@ namespace CoreCrud.Migrations
                     b.Property<DateTime?>("TeamEndDate");
 
                     b.Property<string>("TeamName");
+
+                    b.Property<int>("Wins");
 
                     b.HasKey("ID");
 

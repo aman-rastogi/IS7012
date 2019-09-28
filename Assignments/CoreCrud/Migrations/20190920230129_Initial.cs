@@ -31,7 +31,11 @@ namespace CoreCrud.Migrations
                     TeamCreationDate = table.Column<DateTime>(nullable: false),
                     IsTeamActive = table.Column<bool>(nullable: false),
                     Budget = table.Column<decimal>(nullable: false),
+                    Wins = table.Column<int>(nullable: false),
+                    Loss = table.Column<int>(nullable: false),
                     TeamEndDate = table.Column<DateTime>(nullable: true),
+                    GoalsScored = table.Column<int>(nullable: false),
+                    GoalsAgainst = table.Column<int>(nullable: false),
                     NationalityID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
